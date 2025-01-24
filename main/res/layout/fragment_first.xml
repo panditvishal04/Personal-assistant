@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FirstFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rvNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"  />
+
+
+    <ImageView
+        android:id="@+id/img_filter"
+        android:layout_width="@dimen/margin_30dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/btn_filter"
+        android:src="@drawable/icn_filter"
+        app:layout_constraintBottom_toTopOf="@+id/rvNotes"
+        app:layout_constraintEnd_toStartOf="@+id/tv_high"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_goneMarginStart="@dimen/margin_15dp" />
+
+    <TextView
+        android:id="@+id/tv_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/btn_filter"
+        android:fontFamily="@font/bold"
+        android:paddingStart="@dimen/margin_25dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="8dp"
+        android:text="@string/High"
+        android:textColor="#F30303"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/rvNotes"
+        app:layout_constraintEnd_toStartOf="@+id/tv_medium"
+        app:layout_constraintStart_toEndOf="@+id/img_filter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/btn_filter"
+        android:fontFamily="@font/bold"
+        android:paddingStart="@dimen/margin_30dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="8dp"
+        android:text="@string/Medium"
+        android:textColor="#ECE111"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/rvNotes"
+        app:layout_constraintEnd_toStartOf="@id/tv_low"
+        app:layout_constraintStart_toEndOf="@id/tv_high"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="@dimen/margin_20dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/Low"
+            android:background="@drawable/btn_filter"
+            android:textSize="18sp"
+            android:textColor="#0EE4CA"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:paddingStart="@dimen/margin_25dp"
+            android:layout_marginEnd="@dimen/margin_5dp"
+            android:id="@+id/tv_low"
+            android:paddingEnd="25dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            />
+   />
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/rvNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/tvEmptyNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondPrimary"
+        android:text="@string/write_your_notes"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/tvNothing"
+        android:layout_width="wrap_content"
+        android:textColor="@color/secondPrimary"
+        android:layout_height="wrap_content"
+        android:text="@string/nothing_found"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmptyNotes"
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintVertical_bias=".0"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFab"
+        android:layout_margin="@dimen/margin_20dp"
+        android:src="@drawable/icn_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias=".98"
+        app:layout_constraintHorizontal_bias=".9"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

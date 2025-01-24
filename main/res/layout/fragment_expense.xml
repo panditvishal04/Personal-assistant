@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpenseFragment"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t_i_lLayoutAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:hint="@string/amount"
+            android:layout_marginTop="40dp"
+
+            app:startIconDrawable="@drawable/baseline_currency_rupee_24"
+            android:layout_margin="@dimen/margin_10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_i_etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t_i_lLayoutCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:hint="@string/category"
+            android:layout_marginTop="20dp"
+            android:layout_margin="@dimen/margin_10dp"
+            app:startIconDrawable="@drawable/baseline_menu_24"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_i_etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:text="@string/others"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t_i_lNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:hint="@string/Notes"
+            android:layout_marginTop="20dp"
+            android:layout_margin="@dimen/margin_10dp"
+            app:startIconDrawable="@drawable/baseline_edit_note_24">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_i_etNote"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/t_i_lLayoutPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:hint="@string/payment_method"
+            android:layout_marginTop="20dp"
+            android:layout_margin="@dimen/margin_10dp"
+
+            app:startIconDrawable="@drawable/baseline_payment_24">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_i_etPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Cash"
+                android:textColor="@color/black"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            android:backgroundTint="@color/primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/_done"
+            android:layout_marginTop="50dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

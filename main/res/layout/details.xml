@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        tools:ignore="UselessLeaf">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Amount:-"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="@dimen/margin_10dp">
+            <EditText
+                android:layout_margin="@dimen/margin_10dp"
+                android:id="@+id/tvAmount"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="Category:-"
+            android:textColor="@color/black"
+
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="@dimen/margin_10dp">
+            <EditText
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Category"
+                android:layout_margin="@dimen/margin_10dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="Method:-"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/black"            app:cardCornerRadius="@dimen/margin_10dp">
+            <EditText
+                android:id="@+id/tvMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Method"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_10dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note:-"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:textColor="@color/black"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/black"
+            app:cardCornerRadius="@dimen/margin_10dp">
+            <EditText
+                android:id="@+id/tvNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_10dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:backgroundTint="@color/primary"
+            android:text="Done"
+            android:id="@+id/Edit"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

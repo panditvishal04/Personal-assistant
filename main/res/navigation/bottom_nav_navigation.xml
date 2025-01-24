@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_navigation.xml"
+    app:startDestination="@id/firstFragment2">
+    <fragment
+        android:id="@+id/firstFragment2"
+        android:name="com.vishal.bottomnav.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+
+        <action
+            android:id="@+id/action_firstFragment2_to_create_Fragment"
+            app:destination="@id/create_Fragment" />
+        <action
+            android:id="@+id/action_firstFragment2_to_edit_Fragment"
+            app:destination="@id/edit_Fragment" />
+        <action
+            android:id="@+id/action_firstFragment2_to_edit_Fragment2"
+            app:destination="@id/edit_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.vishal.bottomnav.thirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/create_Fragment"
+        android:name="com.vishal.bottomnav.Fragments.CreateFragment"
+        android:label="create_fragment"
+        tools:layout="@layout/create_fragment" >
+        <action
+            android:id="@+id/action_create_Fragment_to_firstFragment2"
+            app:destination="@id/firstFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_Fragment"
+        android:name="com.vishal.bottomnav.Fragments.EditFragment"
+        android:label="edit_fragment"
+        tools:layout="@layout/edit_fragment" >
+        <action
+            android:id="@+id/action_edit_Fragment_to_firstFragment2"
+            app:destination="@id/firstFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.vishal.bottomnav.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income" />
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.vishal.bottomnav.ExpenseFragment"
+        android:label="fragment_expense"
+        tools:layout="@layout/fragment_expense" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.vishal.bottomnav.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+
+</navigation>
